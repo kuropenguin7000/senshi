@@ -20,6 +20,7 @@
 
     <modules>
         <module>auth-app</module>
+        <module>auth-data</module>
     </modules>
 
     <url/>
@@ -31,9 +32,9 @@
         <developer>
             <id>rafi.saeful</id>
             <name>Rafi Saeful</name>
-            <email>rafisaefulr@gmail.com</email>
+            <email>ctlveccc@gmail.com</email>
             <roles>
-                <role>Developer</role>
+                <role>Assassin</role>
             </roles>
             <timezone>Asia/Jakarta</timezone>
         </developer>
@@ -49,6 +50,10 @@
     <properties>
         <java.version>21</java.version>
         <spring-boot.version>3.4.1</spring-boot.version>
+        <commons-lang3>3.17.0</commons-lang3>
+        <lombok>1.18.36</lombok>
+        <lombok-mapstruct>0.2.0</lombok-mapstruct>
+        <postgresql>42.7.5</postgresql>
     </properties>
 
     <dependencyManagement>
@@ -60,6 +65,30 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok-mapstruct-binding</artifactId>
+                <version>${lombok-mapstruct}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${postgresql}</version>
+                <scope>runtime</scope>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -73,4 +102,5 @@
             </plugins>
         </pluginManagement>
     </build>
+
 </project>
