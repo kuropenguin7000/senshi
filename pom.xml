@@ -23,15 +23,20 @@
         <module>auth-data</module>
     </modules>
 
-    <url/>
+    <url>https://github.com/kuropenguin7000/senshi</url>
+
     <licenses>
-        <license/>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+        </license>
     </licenses>
 
     <developers>
         <developer>
-            <id>rafi.saeful</id>
-            <name>Rafi Saeful</name>
+            <id>kuropenguin7000</id>
+            <name>Kuro Penguin</name>
             <email>ctlveccc@gmail.com</email>
             <roles>
                 <role>Assassin</role>
@@ -41,10 +46,10 @@
     </developers>
 
     <scm>
-        <connection/>
-        <developerConnection/>
+        <connection>scm:git:git://github.com/kuropenguin7000/senshi.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/kuropenguin7000/senshi.git</developerConnection>
         <tag/>
-        <url/>
+        <url>https://github.com/kuropenguin7000/senshi</url>
     </scm>
 
     <properties>
