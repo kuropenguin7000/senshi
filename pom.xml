@@ -54,11 +54,15 @@
 
     <properties>
         <java.version>21</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
         <spring-boot.version>3.4.1</spring-boot.version>
         <commons-lang3>3.17.0</commons-lang3>
         <lombok>1.18.36</lombok>
         <lombok-mapstruct>0.2.0</lombok-mapstruct>
         <postgresql>42.7.5</postgresql>
+        <jwt>0.12.6</jwt>
+        <oauth2-jose>6.4.2</oauth2-jose>
     </properties>
 
     <dependencyManagement>
@@ -93,7 +97,28 @@
                 <version>${postgresql}</version>
                 <scope>runtime</scope>
             </dependency>
-
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-api</artifactId>
+                <version>${jwt}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-impl</artifactId>
+                <version>${jwt}</version>
+                <scope>runtime</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-jackson</artifactId>
+                <version>${jwt}</version>
+                <scope>runtime</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-oauth2-jose</artifactId>
+                <version>${oauth2-jose}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -103,6 +128,14 @@
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.11.0</version>
+                    <configuration>
+                        <release>21</release>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
